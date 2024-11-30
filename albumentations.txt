@@ -32,17 +32,17 @@ ENHANCEMENT_STRATEGY = A.Compose([
         A.ToGray(p=0.1),  # Convert the input RGB image to grayscale
     ], p=1.0)
 
-    # A.OneOf([
-    #     A.GaussNoise(p=1.0), # Apply Gaussian noise to the input image.
-    #     A.ISONoise(p=1.0), # Apply camera sensor noise.
+    A.OneOf([
+        A.GaussNoise(p=1.0), # Apply Gaussian noise to the input image.
+        A.ISONoise(p=1.0), # Apply camera sensor noise.
     #     A.ImageCompression(quality_lower=50, quality_upper=100, p=1.0), # Decreases image quality by Jpeg, WebP compression of an image.
-    #     A.RandomBrightnessContrast(p=1.0), # Randomly change brightness and contrast of the input image.
-    #     A.RandomFog(p=1.0), # Simulates fog for the image.
-    #     A.RandomRain(p=1.0), # Adds rain effects to an image.
-    #     A.RandomSnow(p=1.0), # Bleach out some pixel values imitating snow.
-    #     A.RandomShadow(p=1.0), # Simulates shadows for the image
-    #     A.RandomSunFlare(p=1.0), # Simulates Sun Flare for the image
-    #     A.ToGray(p=1.0), # Convert the input RGB image to grayscale
+        A.RandomBrightnessContrast(p=1.0), # Randomly change brightness and contrast of the input image.
+        A.RandomFog(p=1.0), # Simulates fog for the image.
+        A.RandomRain(p=1.0), # Adds rain effects to an image.
+        A.RandomSnow(p=1.0), # Bleach out some pixel values imitating snow.
+        A.RandomShadow(p=1.0), # Simulates shadows for the image
+        A.RandomSunFlare(p=1.0), # Simulates Sun Flare for the image
+        A.ToGray(p=1.0), # Convert the input RGB image to grayscale
     # ], p=1.0),
 ], bbox_params=A.BboxParams(format='yolo', min_visibility=0.1, label_fields=['class_labels']))
 
