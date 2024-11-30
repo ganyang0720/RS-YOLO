@@ -43,7 +43,7 @@ ENHANCEMENT_STRATEGY = A.Compose([
         A.RandomShadow(p=1.0), # Simulates shadows for the image
         A.RandomSunFlare(p=1.0), # Simulates Sun Flare for the image
         A.ToGray(p=1.0), # Convert the input RGB image to grayscale
-    # ], p=1.0),
+    ], p=1.0),
 ], bbox_params=A.BboxParams(format='yolo', min_visibility=0.1, label_fields=['class_labels']))
 
 
